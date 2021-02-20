@@ -1,0 +1,371 @@
+
+body {
+    background-color: lightgray;
+}
+
+#body_container {
+font-family: 'Balsamiq Sans', cursive;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+h1 {
+background-color: blueviolet;
+width:100%;
+height:50px;
+text-align: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+margin:0px;}
+
+/* dropdown area */
+
+#dropdownContainer {
+display:flex;
+flex-direction: row;
+}
+
+.dropDowns {
+margin:15px;
+}
+
+/* Box where cat face image lives */
+
+#catBox {
+margin-top: 20px;    
+background-color: orange;
+border-radius: 40%; 
+display:grid;
+grid-template-columns: 165px 70px 165px;
+grid-template-rows: 110px 80px 55px 125px;
+grid-template-areas: 
+  "EL space ER"
+  "IL space2 IR"
+  "space3 nose space4"
+  "mouth mouth mouth";
+}
+
+/* Cat styles */
+
+/* <---Ears ---> */
+
+#earLeft {
+    grid-area: EL;
+    justify-self: left;
+    width: 0;
+    height: 10;
+    border-style: solid;
+    border-width: 100px 100px 0 0;
+    border-color: #ff7700 transparent transparent transparent;
+}
+
+#earRight { 
+    grid-area: ER;
+    justify-self: right;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 0;
+    border-color: transparent #ff7700 transparent transparent;
+}
+
+#leftEye{
+  grid-area: IL;
+  justify-self: center;
+}
+
+#rightEye{
+   grid-area: IR;
+   justify-self: center;
+    }
+    
+#nose{
+    grid-area: nose;
+    justify-self: center;
+}
+#mouth{
+   grid-area: mouth;
+   justify-self: center;}
+
+
+/* <-----------------Drop Down List stylings--------------------> */
+
+/* Eye Selection */
+
+/* <---Eye1 round ---> */
+.circle {
+    display: grid;
+    height: 55px;
+    width: 55px;
+    background-color: white;
+    border-radius: 50%; 
+ }
+
+
+ .pupil { 
+   background: #000;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   margin:5px;
+   grid-area: IL;
+   justify-self: center;
+}
+
+
+/* <---Eye2 heart --->*/
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+  }
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+
+
+
+/* <---Eye3 sunglasses --->*/
+  .eyes3 { width: 71px;
+  height: 60px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 39%, rgba(0,212,255,1) 100%);
+  position: relative;
+}
+.eyes3:before {
+  content: "";
+  width: 45px;
+  height: 0;
+  position: absolute;
+  top: 0;
+  border-bottom: 10px solid blue;
+  border-left: 13px solid orange;
+  border-right: 13px solid orange;
+}
+.eyes3:after {
+  content: "";
+  width: 45px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+ border-top: 10px solid blue;
+  border-left: 13px solid orange;
+  border-right: 13px solid orange;
+}
+
+
+/* <---Eye4 cat eye  --->*/
+.eyes4 {
+    height: 50px;
+    width: 100px;
+    background-color: rgb(57, 196, 103);
+    border-radius: 50%;
+    display: grid;
+}
+   
+.circle2 {
+    display: grid;
+    height: 45px;
+    width: 45px;
+    background-color: #000;
+    border-radius: 50%; 
+    margin:-45px 30px;
+ }
+  
+  .pupil2 { 
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin:15px 40px;
+    grid-area: IL;
+    
+ }
+
+  /* <----------> */
+
+/* Eye adjustments */
+  .moveleft {
+    margin-right:45px;
+}
+
+.moveleft2 {
+    margin-left:28px;
+    margin-top:20px;
+}
+
+.moveright{
+    margin-left:45px;
+}
+
+.moveright2{
+    margin-right:24px;
+    margin-bottom:18px;
+    
+}
+
+  /* <--------------------------------> */
+
+
+
+ /* Nose Selection */
+
+/* <---Nose1 triangle ---> */
+.nose {
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 25px 50px 25px;
+border-color: transparent transparent #e62294 transparent;
+}
+
+/* <---Nose2 rounded ---> */
+.nose2 {
+    position: relative;
+    width: 100px;
+    height: 20px;
+  }
+  .nose2:before,
+  .nose2:after {
+    position: absolute;
+    content: "";
+    left: 75px;
+    top: 0;
+    width: 20px;
+    height: 25px;
+    border: 3px solid rgb(46, 36, 41);
+    background-color: rgb(46, 36, 41);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(180deg);
+    transform-origin: 0 100%;
+  }
+  .nose2:after {
+    left: 0;
+    transform: rotate(-180deg);
+    transform-origin: 100% 100%;
+  }
+
+  /* <---Nose3 diamond ---> */
+
+  .nose3 {
+    width: 0;
+    height: 0;
+    border: 40px solid transparent;
+    border-bottom: 10px solid rgb(236, 68, 222);
+    position: relative;
+    top: -40px;
+  }
+
+  .nose3:after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 40px solid transparent;
+    border-top: 60px solid rgb(236, 68, 222);
+  }
+
+  /* <---Nose4 cone ---> */
+
+  .nose4 {
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 60px solid gray;
+    border-radius: 50%;
+  }
+  /* <--------------------------------> */
+
+
+/* <--mouth selections--> */
+
+/* <---Mouth1 smile ---> */
+.mouth {
+    border-bottom: 3px solid black;
+    border-radius: 20px 20px 70px 70px;
+    width: 200px;
+    height: 50px;
+    margin-top: 15px;
+ }
+
+ 
+/* <---Mouth2 toungue ---> */
+
+ .mouth2 {
+    border: 2px solid rgb(223, 98, 75);
+    background-color: salmon;
+    border-radius: 20px 20px 50px 50px;
+    width: 170px;
+    height: 20px;
+    margin-top: 25px;
+    z-index:20;
+ }
+
+ .mouth2a {
+    position: relative;
+    width: 100px;
+    height: 10px;
+  }
+ .mouth2a:before,
+  .mouth2a:after {
+    position:absolute;
+    content: "";
+    left: 90px;
+    top: 0;
+    width: 40px;
+    height: 50px;
+    border: 2px solid rgb(223, 98, 75);
+    background: salmon;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(180deg);
+    transform-origin: 10%;
+  }
+
+
+/* <---Mouth3 surprise ---> */
+
+.mouth3{
+    height:45px;
+    width:100px;
+    border-radius: 0 0 90px 90px;
+    background:rgb(105, 28, 9);
+    margin-top: 25px;
+}
+
+
+/* <---Mouth4 wide grin ---> */
+
+.mouth4 {
+    border-bottom:5px solid black;
+    border-radius: 50%;
+    width: 300px;
+    height: 80px;
+ }
+
+  /* <--------------------------------> */
+
+  /* <--Whisker selections--> */
+
+/* <---whisker1   ---> */
+
+  

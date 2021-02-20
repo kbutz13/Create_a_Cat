@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Create a Cat</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="CAC.css">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="body_container">
+<h1> :: Create a Cat! ::</h1>
+<p> Select items from each dropdown to create your very own cat right meow! </p>
+
+<div id="dropdownContainer">
+<!-- dropdown  for mouth  -->
+
+<form class="dropDowns">
+    <label for="catMouth">Choose a mouth:</label>
+    <select onchange="addMouth()" id="catMouth" name="cat mouth">
+      <option selected="selected">select</option>option>
+      <option value="smile">smile</option>
+      <option value="tongue">tongue</option>
+      <option value="surprise">surprise</option>
+      <option value="widegrin">wide grin</option>
+    </select>
+</form>
+
+    <!-- dropdown for eyes  -->
+
+    <form class="dropDowns">
+        <label for="catEyes">Choose eyes:</label>
+        <select onchange="addCatEyes()" id="catEyes" name="cat eyes">
+          <option selected="selected">select</option>option>
+          <option value="round">round</option>
+          <option value="heart">heart</option>
+          <option value="sunglasses">sunglasses</option>
+          <option value="crazy">crazy</option>
+          <option value="classic">classic</option>
+        </select>
+    </form>
+    
+
+    <!-- dropdown for nose  -->
+
+<form class="dropDowns">
+    <label for="catNose">Choose a nose:</label>
+    <select onchange="addNose()" id="catNose" name="cat nose">
+      <option selected="selected">select</option>option>
+      <option value="triangle">triangle</option>
+      <option value="rounded">rounded</option>
+      <option value="diamond">diamond</option>
+      <option value="cone">cone</option>
+    </select>
+</form>
+</div>
+
+<div id="catBox">
+  <div id="earLeft"></div>
+  <div id="earRight"> </div>
+  <div id="leftEye"> </div>
+  <div id="rightEye"> </div>
+  <div id="nose">  </div>
+  <div id="mouth">  </div>
+ </div>
+
+
+
+</div>
+
+  <script src="CAC.js"></script>
+</body>
+</html>
